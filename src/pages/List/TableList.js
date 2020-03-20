@@ -262,7 +262,14 @@ class UpdateForm extends PureComponent {
         onCancel={() => handleUpdateModalVisible(false, values)}
         afterClose={() => handleUpdateModalVisible()}
       >
-        <Steps style={{ marginBottom: 28 }} size="small" current={currentStep}>
+        <Steps
+          style={{ marginBottom: 28 }}
+          size="small"
+          current={currentStep}
+          onChange={current => {
+            this.setState({ currentStep: current });
+          }}
+        >
           <Step title="基本信息" />
           <Step title="配置规则属性" />
           <Step title="设定调度周期" />
