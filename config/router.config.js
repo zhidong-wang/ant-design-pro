@@ -290,6 +290,18 @@ export default [
         ],
       },
       {
+        name: 'mymenu',
+        icon: 'highlight',
+        path: '/mymenu',
+        routes: [
+          {
+            path: '/mymenu/test1',
+            name: 'test1',
+            component: './MyMenu/Test1',
+          },
+        ],
+      },
+      {
         component: '404',
       },
     ],
